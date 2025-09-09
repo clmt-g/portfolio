@@ -56,7 +56,7 @@
 <script setup>
 // fonction pour ouvir le lien de la grille d'évaluation
 const openPDF = (path) => {
-  window.location.href = path
+  window.open(path, '_blank');
 }
 </script>
 
