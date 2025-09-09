@@ -45,7 +45,7 @@
             </table>
         </div>
         <div class="lien">
-            <a href="https://clmt-g.github.io/portfolio/grille_evaluation.pdf" target="_blank">
+            <a href="https://clmt-g.github.io/portfolio/grille_evaluation.pdf" target="_blank" rel="noopener noreferrer">
             Consulter la grille d'évaluation
             </a>
         </div>
