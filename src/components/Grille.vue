@@ -12,7 +12,7 @@
                     <th>Répondre aux incidents et aux demandes d'assistances et d'évolution</th>
                     <th>Développer la présence en ligne de l'organisation</th>
                     <th>Travailler en mode projet</th>
-                    <th>Mettre à disposition des utilisateurs un service informatique</th>
+                    <th>Mettre à disposition à des utilisateurs un service informatique</th>
                     <th>Organiser son développement professionnel</th>
                 </tr>
                 <tr>
