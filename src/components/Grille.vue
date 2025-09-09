@@ -19,17 +19,17 @@
                     <th class="lower-header">Réalisation en cours de formation</th>
                     <td></td>
                     <td></td>
-                    <td @click="openPDF('https://clmt-g.github.io/portfolio/projects/preuve3.pdf')" class="clickable">✗</td>
+                    <td @click="openPDF('https://clmt-g.github.io/portfolio/projects/preuve3.pdf')" class="clickable" rel="noopener noreferrer">✗</td>
                     <td></td>
-                    <td @click="openPDF('https://clmt-g.github.io/portfolio/projects/preuve5.pdf')" class="clickable">✗</td>
-                    <td @click="openPDF('/projects/preuve6.pdf')" class="clickable">✗</td>
+                    <td @click="openPDF('https://clmt-g.github.io/portfolio/projects/preuve5.pdf')" class="clickable" rel="noopener noreferrer">✗</td>
+                    <td @click="openPDF('https://clmt-g.github.io/portfolio/projects/preuve6.pdf')" class="clickable" rel="noopener noreferrer">✗</td>
                 </tr>
                 <tr>
                     <th class="lower-header">Réalisation en millieu professionnel en cours de première année</th>
-                    <td @click="openPDF('https://clmt-g.github.io/portfolio/projects/preuve1.pdf')" class="clickable">✗</td>
-                    <td @click="openPDF('https://clmt-g.github.io/portfolio/projects/preuve2.pdf')" class="clickable">✗</td>
+                    <td @click="openPDF('https://clmt-g.github.io/portfolio/projects/preuve1.pdf')" class="clickable" rel="noopener noreferrer">✗</td>
+                    <td @click="openPDF('https://clmt-g.github.io/portfolio/projects/preuve2.pdf')" class="clickable" rel="noopener noreferrer">✗</td>
                     <td></td>
-                    <td @click="openPDF('https://clmt-g.github.io/portfolio/projects/preuve4.pdf')" class="clickable">✗</td>
+                    <td @click="openPDF('https://clmt-g.github.io/portfolio/projects/preuve4.pdf')" class="clickable" rel="noopener noreferrer">✗</td>
                     <td></td>
                     <td></td>
                 </tr>

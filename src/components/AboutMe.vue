@@ -26,7 +26,7 @@
         <line x1="10" y1="0" x2="10" y2="90" />
         <polyline points="0,80 10,100 20,80" />
       </svg>
-      <button class="cv-button" @click="openCV">
+      <button class="cv-button" @click="openCV" rel="noopener noreferrer">
         Télécharger mon CV
       </button>   
       <!-- lien LinkedIn -->
