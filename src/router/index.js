@@ -6,7 +6,7 @@ import Certification from '../pages/Certifications.vue'
 const routes = [
   { path: '/', name: 'Home', component: HomePage },
   { path: '/projects', name: 'Projects', component: Projects },
-    { path: '/certification', name: 'Certification', component: Certification }
+    { path: '/certifications', name: 'Certification', component: Certification }
 ]
 
 const router = createRouter({

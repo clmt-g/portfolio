@@ -32,32 +32,32 @@ const projects = [
   {
     name: "1. Gérer le patrimoine informatique",
     subSkills: ["Recenser et identifier les ressources numériques"],
-    pdf: "/projects/preuve1.pdf"
+    pdf: "https://clmt-g.github.io/portfolio/projects/preuve1.pdf"
   },
   {
     name: "2. Répondre aux incidents et aux demandes d’assistance et d’évolution",
     subSkills: ["Traiter des demandes concernant les services réseau et système, applicatifs"],
-    pdf: "/projects/preuve2.pdf"
+    pdf: "https://clmt-g.github.io/portfolio/projects/preuve2.pdf"
   },
   {
     name: "3. Participer à la valorisation de l’image de l’organisation sur les médias numériques",
     subSkills: ["Référencer les services en ligne de l’organisation et mesurer leur visibilité"],
-    pdf: "/projects/preuve3.pdf"
+    pdf: "https://clmt-g.github.io/portfolio/projects/preuve3.pdf"
   },
   {
     name: "4. Analyser les objectifs et les modalités d'organisation d'un projet",
     subSkills: ["Planifier les activités"],
-    pdf: "/projects/preuve4.pdf"
+    pdf: "https://clmt-g.github.io/portfolio/projects/preuve4.pdf"
   },
   {
     name: "5. Réaliser les tests d'intégration et d'acceptation d'un service",
     subSkills: ["Déployer un service"],
-    pdf: "/projects/preuve5.pdf"
+    pdf: "https://clmt-g.github.io/portfolio/projects/preuve5.pdf"
   },
   {
     name: "6. Mettre en place son environnement d’apprentissage personnel",
     subSkills: ["Gérer son identité professionnelle"],
-    pdf: "/projects/preuve6.pdf"
+    pdf: "https://clmt-g.github.io/portfolio/projects/preuve6.pdf"
   }
 ];
 </script>

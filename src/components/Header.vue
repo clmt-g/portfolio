@@ -7,7 +7,7 @@
         </div>
         <div class="right">
           <router-link to="/projects" class="lien">Projets </router-link>
-          <router-link to="/certification" class="lien">Certifications </router-link>
+          <router-link to="/certifications" class="lien">Certifications </router-link>
         </div>
       </nav>
     </div>

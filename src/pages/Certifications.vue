@@ -20,23 +20,23 @@ import Footer from '../components/Footer.vue';
 const certifications = [
   {
     name: "HTML W3School",
-    pdf: "/certifications/HTML_W3School.pdf"
+    pdf: "https://clmt-g.github.io/portfolio/certifications/HTML_W3School.pdf"
   },
   {
     name: "Python W3School",
-    pdf: "/certifications/Python_W3School.pdf"
+    pdf: "https://clmt-g.github.io/portfolio/certifications/Python_W3School.pdf"
   },
   {
     name: "Python Essancial 1 NetAcad",
-    pdf: "/certifications/PythonEssentials.pdf"
+    pdf: "https://clmt-g.github.io/portfolio/certifications/PythonEssentials.pdf"
   },
   {
     name: "RH104 Certification Red Hat",
-    pdf: "/certifications/RH104_Certification.pdf"
+    pdf: "https://clmt-g.github.io/portfolio/certifications/RH104_Certification.pdf"
   },
   {
     name: "SQL W3School",
-    pdf: "/certifications/SQL_W3School.pdf"
+    pdf: "https://clmt-g.github.io/portfolio/certifications/SQL_W3School.pdf"
   }
 ]
 </script>

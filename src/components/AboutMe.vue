@@ -44,7 +44,7 @@
 
 <script setup>
 const openCV = () => {
-  window.open('/CV.pdf', '_blank') 
+  window.open('https://clmt-g.github.io/portfolio/CV.pdf', '_blank') 
 }
 </script>
 

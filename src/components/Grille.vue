@@ -19,17 +19,17 @@
                     <th class="lower-header">Réalisation en cours de formation</th>
                     <td></td>
                     <td></td>
-                    <td @click="openPDF('/projects/preuve3.pdf')" class="clickable">✗</td>
+                    <td @click="openPDF('https://clmt-g.github.io/portfolio/projects/preuve3.pdf')" class="clickable">✗</td>
                     <td></td>
-                    <td @click="openPDF('/projects/preuve5.pdf')" class="clickable">✗</td>
+                    <td @click="openPDF('https://clmt-g.github.io/portfolio/projects/preuve5.pdf')" class="clickable">✗</td>
                     <td @click="openPDF('/projects/preuve6.pdf')" class="clickable">✗</td>
                 </tr>
                 <tr>
                     <th class="lower-header">Réalisation en millieu professionnel en cours de première année</th>
-                    <td @click="openPDF('/projects/preuve1.pdf')" class="clickable">✗</td>
-                    <td @click="openPDF('/projects/preuve2.pdf')" class="clickable">✗</td>
+                    <td @click="openPDF('https://clmt-g.github.io/portfolio/projects/preuve1.pdf')" class="clickable">✗</td>
+                    <td @click="openPDF('https://clmt-g.github.io/portfolio/projects/preuve2.pdf')" class="clickable">✗</td>
                     <td></td>
-                    <td @click="openPDF('/projects/preuve4.pdf')" class="clickable">✗</td>
+                    <td @click="openPDF('https://clmt-g.github.io/portfolio/projects/preuve4.pdf')" class="clickable">✗</td>
                     <td></td>
                     <td></td>
                 </tr>
@@ -45,7 +45,7 @@
             </table>
         </div>
         <div class="lien">
-            <a href="/grille_evaluation.pdf" target="_blank">
+            <a href="https://clmt-g.github.io/portfolio/grille_evaluation.pdf" target="_blank">
             Consulter la grille d'évaluation
             </a>
         </div>
