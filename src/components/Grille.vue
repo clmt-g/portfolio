@@ -75,7 +75,7 @@ const openPDF = (path) => {
 
 .container {
   width: 100%;
-  overflow-x: auto; 
+  overflow-x: hidden; 
 }
 
 h2 {
@@ -125,7 +125,6 @@ table td.clickable {
   text-align: center;
   vertical-align: middle;
   transition: transform 0.2s, color 0.2s;
-  transform-origin: center;
 }
 
 table td.clickable:hover {
