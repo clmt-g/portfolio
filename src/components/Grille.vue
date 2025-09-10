@@ -75,7 +75,7 @@ const openPDF = (path) => {
 
 .container {
   width: 100%;
-  overflow-x: hidden; 
+  overflow-x:visible;
 }
 
 h2 {
