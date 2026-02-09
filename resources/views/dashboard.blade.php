@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Portfolio - Votre Nom')
+@section('title', 'Portfolio - Clément Guerault')
 
 @push('styles')
     <style>
@@ -106,14 +106,14 @@
         <div class="container mx-auto text-center">
             <div class="animate-fade-in-up">
                 <h1 class="hero-title mb-6">
-                    <span class="block">Votre</span>
-                    <span class="block bg-gradient-to-r from-accent to-pink-500 bg-clip-text text-transparent">Nom</span>
+                    <span class="block bg-gradient-to-r from-accent to-gray-500 bg-clip-text text-transparent">Clément</span>
+                    <span class="block bg-gradient-to-r from-accent to-pink-500 bg-clip-text text-transparent">Guerault</span>
                 </h1>
                 <p class="text-xl md:text-2xl text-gray-600 mb-8 max-w-2xl mx-auto font-light">
                     Bienvenue sur mon portfolio
                 </p>
                 <p class="text-lg text-gray-500 mb-12 max-w-xl mx-auto">
-                    Étudiant en BTS SIO - Spécialité SISR/SLAM
+                    Étudiant en BTS SIO - Spécialité SLAM
                 </p>
                 <a href="#apropos" class="btn-primary inline-block px-8 py-4 text-white rounded-lg font-semibold shadow-lg">
                     Découvrir mon parcours
@@ -125,28 +125,41 @@
     <!-- Section À propos -->
     <section id="apropos" class="py-24 px-6 bg-white">
         <div class="container mx-auto max-w-6xl">
-            <h2 class="section-title mb-16">À propos</h2>
+            <h2 class="section-title mb-16 bg-gradient-to-r from-accent to-pink-500 bg-clip-text text-transparent">À propos</h2>
 
             <div class="grid md:grid-cols-2 gap-12 mb-16">
                 <!-- Présentation -->
                 <div class="space-y-6">
                     <h3 class="text-2xl font-bold text-gray-800 mb-4">Présentation</h3>
                     <p class="text-gray-600 leading-relaxed">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Passionné par l'informatique et la cybersécurité,
-                        je suis actuellement en formation BTS SIO avec une spécialisation en [SISR/SLAM].
+                        Je m’appelle Clément Guérault, étudiant en deuxième année de BTS SIO, spécialité SLAM,
+                        à l’Institution des Chartreux. Passionné par le développement et les technologies du web.
                     </p>
                     <p class="text-gray-600 leading-relaxed">
-                        Mon objectif est de développer mes compétences techniques tout en contribuant à des projets innovants
-                        dans le domaine de l'informatique et de la sécurité des systèmes d'information.
+                        Actuellement, je cherche à consolider mes compétences techniques et méthodologiques à travers des projets concrets.
+                        Mon objectif à court terme est d’intégrer l’école d’ingénieur ICS.
                     </p>
                 </div>
 
-                <!-- Photo placeholder -->
+                <!-- animation -->
                 <div class="flex items-center justify-center">
-                    <div class="w-64 h-64 bg-gradient-to-br from-secondary to-accent rounded-2xl shadow-xl flex items-center justify-center text-white text-6xl font-bold">
-                        Photo
+                    <div class="relative w-64 h-64">
+                        <!-- Halo flou avec gradient doux -->
+                        <div class="absolute inset-0 rounded-2xl bg-gradient-to-br from-accent to-pink-500 blur-3xl opacity-25 animate-pulse"></div>
+
+                        <!-- Orbites minimalistes -->
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="w-48 h-48 border border-pink-300/30 rounded-full animate-spin-slow"></div>
+                            <div class="absolute w-36 h-36 border border-accent/20 rounded-full animate-spin-reverse"></div>
+                        </div>
+
+                        <!-- Noyau central discret -->
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="w-16 h-16 bg-accent/90 rounded-full shadow-lg animate-float"></div>
+                        </div>
                     </div>
                 </div>
+
             </div>
 
             <!-- CV Download -->
@@ -156,7 +169,7 @@
                         <h4 class="text-xl font-bold text-gray-800 mb-2">Curriculum Vitae</h4>
                         <p class="text-gray-600">Téléchargez mon CV complet au format PDF</p>
                     </div>
-                    <a href="/cv.pdf" class="btn-primary px-6 py-3 text-white rounded-lg font-semibold inline-flex items-center gap-2">
+                    <a href="{{ asset('images/CV_CLEMENT_GUERAULT.pdf') }}" class="btn-primary px-6 py-3 text-white rounded-lg font-semibold inline-flex items-center gap-2">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
                         </svg>
@@ -167,32 +180,42 @@
 
             <!-- Certifications & Compétitions -->
             <div class="mb-16">
-                <h3 class="text-2xl font-bold text-gray-800 mb-6">Certifications & Compétitions</h3>
+                <h3 class="text-2xl font-bold text-gray-800 mb-6">CTF</h3>
                 <div class="grid md:grid-cols-2 gap-6">
                     <div class="card bg-gradient-to-br from-orange-500 to-red-600 p-6 rounded-xl shadow-lg text-white">
                         <div class="flex items-center gap-4 mb-4">
                             <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm">
                                 <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                          d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
                                 </svg>
                             </div>
-                            <div>
-                                <h4 class="text-xl font-bold">Root-Me</h4>
-                                <p class="text-white/80">Plateforme CTF</p>
+                            <div class="flex flex-col">
+                                <div class="flex items-center gap-2">
+                                    <h3 class="text-xl font-bold">Root-Me</h3>
+                                    <a href="https://www.root-me.org/c-guerault?lang=fr"
+                                       class="text-white/80 hover:text-white flex items-center gap-1 text-sm">
+                                        Voir <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7-7l7 7-7 7"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <p class="text-white/80 text-sm">Plateforme CTF</p>
                             </div>
                         </div>
+
                         <div class="space-y-2">
                             <div class="flex justify-between">
                                 <span>Rang</span>
-                                <span class="font-bold">#1234</span>
+                                <span class="font-bold">~#18500</span>
                             </div>
                             <div class="flex justify-between">
                                 <span>Points</span>
-                                <span class="font-bold">500 pts</span>
+                                <span class="font-bold">875 pts</span>
                             </div>
                             <div class="flex justify-between">
                                 <span>Challenges</span>
-                                <span class="font-bold">25 validés</span>
+                                <span class="font-bold">62 validés</span>
                             </div>
                         </div>
                     </div>
@@ -212,19 +235,24 @@
                         <div class="space-y-2">
                             <div class="flex justify-between">
                                 <span>Année</span>
-                                <span class="font-bold">2024</span>
+                                <span class="font-bold">2026</span>
                             </div>
                             <div class="flex justify-between">
                                 <span>Classement</span>
-                                <span class="font-bold">Top 50</span>
+                                <span class="font-bold">3ème</span>
                             </div>
                             <div class="flex justify-between">
-                                <span>Catégorie</span>
-                                <span class="font-bold">Web / Crypto</span>
+                                <span>Equipe</span>
+                                <span class="font-bold">Les hommes du mileu</span>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold text-gray-800 mb-6">Certifications</h3>
+                <p>faire une table</p>
             </div>
 
             <!-- Compétences -->
