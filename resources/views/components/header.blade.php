@@ -1,7 +1,7 @@
 <header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm shadow-sm z-50">
     <nav class="container mx-auto px-6 py-4">
         <div class="flex items-center justify-between">
-            <a href="{{ route('home') }}" class="text-2xl font-bold bg-gradient-to-r from-accent to-pink-500 bg-clip-text text-transparent">
+            <a href="{{ route('dashboard') }}" class="text-2xl font-bold bg-gradient-to-r from-accent to-pink-500 bg-clip-text text-transparent">
                 Portfolio
             </a>
 
@@ -30,7 +30,7 @@
                         <a href="{{ route('login') }}" class="px-4 py-2 bg-accent text-white rounded-lg hover:bg-red-600 transition">
                             Connexion
                         </a>
-                    </li>
+                    </li>S
                 @endauth
             </ul>
 
