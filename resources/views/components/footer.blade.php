@@ -5,13 +5,13 @@
                 <h3 class="text-2xl font-bold mb-4 bg-gradient-to-r from-accent to-pink-500 bg-clip-text text-transparent">
                     Portfolio
                 </h3>
-                <p class="text-gray-400">
+                <p class="text-gray-800">
                     Étudiant en BTS SIO passionné par l'informatique et la cybersécurité.
                 </p>
             </div>
             <div>
-                <h4 class="text-lg font-bold mb-4">Navigation</h4>
-                <ul class="space-y-2 text-gray-400">
+                <h4 class="text-2xl font-bold mb-4 bg-gradient-to-r from-accent to-pink-500 bg-clip-text text-transparent">Navigation</h4>
+                <ul class="space-y-2 text-gray-800">
                     <li><a href="#accueil" class="hover:text-accent transition">Accueil</a></li>
                     <li><a href="#apropos" class="hover:text-accent transition">À propos</a></li>
                     <li><a href="#parcours" class="hover:text-accent transition">Parcours</a></li>
@@ -20,16 +20,15 @@
                 </ul>
             </div>
             <div>
-                <h4 class="text-lg font-bold mb-4">Contact</h4>
-                <ul class="space-y-2 text-gray-400">
-                    <li>votre.email@example.com</li>
-                    <li>+33 6 12 34 56 78</li>
-                    <li>Paris, France</li>
+                <h4 class="text-2xl font-bold mb-4 bg-gradient-to-r from-accent to-pink-500 bg-clip-text text-transparent">Contact</h4>
+                <ul class="space-y-2 text-gray-800">
+                    <li>guerault.clement@gmail.com</li>
+                    <li>Lyon, France</li>
                 </ul>
             </div>
         </div>
-        <div class="border-t border-gray-700 pt-8 text-center text-gray-400">
-            <p>&copy; {{ date('Y') }} Votre Nom. Tous droits réservés.</p>
+        <div class="border-t border-gray-700 pt-8 text-center text-gray-800">
+            <p>{{ date('Y') }} Guerault Clément. Tous droits réservés.</p>
         </div>
     </div>
 </footer>
