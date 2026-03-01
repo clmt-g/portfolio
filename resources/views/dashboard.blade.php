@@ -208,6 +208,181 @@
         .animate-fade-in-up {
             animation: fadeInUp 0.8s ease-out forwards;
         }
+        /* Section E4 */
+        .bts-section {
+            background: linear-gradient(135deg, #0d1117 0%, #16213e 50%, #1a1a2e 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .bts-section::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(233, 69, 96, 0.08), transparent 70%);
+            pointer-events: none;
+        }
+
+        .bts-badge {
+            display: inline-block;
+            background: rgba(233, 69, 96, 0.15);
+            color: #e94560;
+            border: 1px solid rgba(233, 69, 96, 0.4);
+            padding: 0.25rem 0.85rem;
+            border-radius: 999px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+        }
+
+        .bts-pdf-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(233, 69, 96, 0.12);
+            color: #e94560;
+            border: 1px solid rgba(233, 69, 96, 0.35);
+            padding: 0.6rem 1.2rem;
+            border-radius: 10px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: background 0.2s, border-color 0.2s, transform 0.2s;
+            white-space: nowrap;
+            align-self: flex-start;
+            margin-top: 0.25rem;
+        }
+
+        .bts-pdf-btn:hover {
+            background: rgba(233, 69, 96, 0.25);
+            border-color: #e94560;
+            transform: translateY(-2px);
+        }
+
+        /* Table wrapper avec scroll horizontal sur mobile */
+        .bts-table-wrapper {
+            overflow-x: auto;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .bts-table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 700px;
+        }
+
+        /* Header */
+        .bts-table thead tr {
+            background: rgba(255, 255, 255, 0.04);
+            border-bottom: 1px solid rgba(233, 69, 96, 0.3);
+        }
+
+        .bts-table thead th {
+            padding: 1rem 0.85rem;
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: rgba(255, 255, 255, 0.6);
+            text-align: center;
+            line-height: 1.4;
+            vertical-align: top;
+        }
+
+        .bts-th-context {
+            text-align: left !important;
+            color: rgba(255, 255, 255, 0.3) !important;
+            width: 150px;
+            min-width: 130px;
+        }
+
+        .bts-col-number {
+            display: block;
+            color: #e94560;
+            font-size: 0.65rem;
+            margin-bottom: 0.3rem;
+            opacity: 0.9;
+        }
+
+        /* Body rows */
+        .bts-table tbody tr {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            transition: background 0.2s;
+        }
+
+        .bts-table tbody tr:last-child {
+            border-bottom: none;
+        }
+
+        .bts-table tbody tr:hover {
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        .bts-table tbody td {
+            padding: 1.1rem 0.85rem;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        /* Row label */
+        .bts-row-label {
+            text-align: left !important;
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.75);
+            padding-left: 1.2rem !important;
+            white-space: nowrap;
+        }
+
+        .bts-row-number {
+            display: inline-block;
+            font-size: 0.6rem;
+            color: #e94560;
+            font-weight: 700;
+            margin-right: 0.4rem;
+            opacity: 0.7;
+        }
+
+        /* Check cells */
+        .bts-check {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-decoration: none;
+            background: rgba(255, 255, 255, 0.04);
+            color: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            transition: background 0.2s, color 0.2s, border-color 0.2s, transform 0.15s;
+        }
+
+        .bts-check:hover {
+            background: rgba(233, 69, 96, 0.15);
+            color: #e94560;
+            border-color: rgba(233, 69, 96, 0.4);
+            transform: scale(1.15);
+        }
+
+        /* Case active (compétence validée avec lien) */
+        .bts-check--active {
+            background: rgba(233, 69, 96, 0.18);
+            color: #e94560;
+            border-color: rgba(233, 69, 96, 0.45);
+        }
+
+        .bts-check--active:hover {
+            background: rgba(233, 69, 96, 0.32);
+            transform: scale(1.15);
+        }
     </style>
 @endpush
 
@@ -652,87 +827,104 @@
 
     <!-- Section Épreuve BTS (Protected) -->
     @auth
-        <section id="epreuve-bts" class="bg-gradient-to-br from-purple-600 to-indigo-700 py-24 px-6">
+        <section id="epreuve-bts" class="bts-section py-24 px-6">
             <div class="container mx-auto max-w-6xl">
-                <h2 class="section-title text-white mb-16">Épreuve E4 - BTS SIO</h2>
 
-                <div class="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 text-white">
-                    <h3 class="text-3xl font-bold mb-6">Documentation de l'épreuve</h3>
-
-                    <div class="grid md:grid-cols-2 gap-8 mb-8">
-                        <div class="bg-white/5 p-6 rounded-xl">
-                            <h4 class="text-xl font-bold mb-4">Contexte professionnel</h4>
-                            <p class="text-white/80 mb-4">
-                                Description du contexte de l'entreprise fictive ou réelle dans laquelle se déroule le projet.
-                            </p>
-                            <ul class="space-y-2 text-white/80">
-                                <li>• Secteur d'activité</li>
-                                <li>• Problématique identifiée</li>
-                                <li>• Objectifs du projet</li>
-                            </ul>
+                <!-- Header -->
+                <div class="bts-header mb-12">
+                    <div class="flex items-start justify-between flex-wrap gap-6">
+                        <div>
+                            <div class="bts-badge mb-3">Option SLAM</div>
+                            <h2 class="section-title text-white mb-3">Épreuve E4 — BTS SIO</h2>
+                            <p class="text-white/50 text-sm">Solutions Logicielles et Applications Métiers</p>
                         </div>
-
-                        <div class="bg-white/5 p-6 rounded-xl">
-                            <h4 class="text-xl font-bold mb-4">Compétences mobilisées</h4>
-                            <div class="space-y-2">
-                                <div class="bg-white/10 px-4 py-2 rounded-lg">B1.1 - Gestion du patrimoine informatique</div>
-                                <div class="bg-white/10 px-4 py-2 rounded-lg">B1.2 - Réponse aux incidents et demandes</div>
-                                <div class="bg-white/10 px-4 py-2 rounded-lg">B1.3 - Développement de la présence en ligne</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="bg-white/5 p-6 rounded-xl mb-8">
-                        <h4 class="text-xl font-bold mb-4">Productions réalisées</h4>
-                        <div class="grid md:grid-cols-3 gap-4">
-                            <a href="#" class="bg-white/10 hover:bg-white/20 p-4 rounded-lg transition text-center">
-                                <svg class="w-12 h-12 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-                                </svg>
-                                <p class="font-medium">Tableau de synthèse</p>
-                            </a>
-                            <a href="#" class="bg-white/10 hover:bg-white/20 p-4 rounded-lg transition text-center">
-                                <svg class="w-12 h-12 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
-                                </svg>
-                                <p class="font-medium">Documentation technique</p>
-                            </a>
-                            <a href="#" class="bg-white/10 hover:bg-white/20 p-4 rounded-lg transition text-center">
-                                <svg class="w-12 h-12 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
-                                </svg>
-                                <p class="font-medium">Code source</p>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="bg-white/5 p-6 rounded-xl">
-                        <h4 class="text-xl font-bold mb-4">Timeline du projet</h4>
-                        <div class="space-y-4">
-                            <div class="flex items-start gap-4">
-                                <div class="w-2 h-2 bg-white rounded-full mt-2"></div>
-                                <div>
-                                    <p class="font-bold">Phase 1 : Analyse et conception</p>
-                                    <p class="text-white/80 text-sm">Étude du besoin et conception de la solution</p>
-                                </div>
-                            </div>
-                            <div class="flex items-start gap-4">
-                                <div class="w-2 h-2 bg-white rounded-full mt-2"></div>
-                                <div>
-                                    <p class="font-bold">Phase 2 : Développement</p>
-                                    <p class="text-white/80 text-sm">Implémentation de la solution technique</p>
-                                </div>
-                            </div>
-                            <div class="flex items-start gap-4">
-                                <div class="w-2 h-2 bg-white rounded-full mt-2"></div>
-                                <div>
-                                    <p class="font-bold">Phase 3 : Tests et déploiement</p>
-                                    <p class="text-white/80 text-sm">Validation et mise en production</p>
-                                </div>
-                            </div>
-                        </div>
+                        <a href="{{ asset('assets/bts/grille-competences.pdf') }}" target="_blank" class="bts-pdf-btn">
+                            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                            </svg>
+                            Grille de compétences
+                        </a>
                     </div>
                 </div>
+
+                <!-- Tableau -->
+                <div class="bts-table-wrapper">
+                    <table class="bts-table">
+                        <thead>
+                        <tr>
+                            <th class="bts-th-context">Contexte</th>
+                            <th>
+                                <span class="bts-col-number">B1.1</span>
+                                Patrimoine informatique
+                            </th>
+                            <th>
+                                <span class="bts-col-number">B1.2</span>
+                                Incidents &amp; assistance
+                            </th>
+                            <th>
+                                <span class="bts-col-number">B1.3</span>
+                                Présence en ligne
+                            </th>
+                            <th>
+                                <span class="bts-col-number">B2.1</span>
+                                Mode projet
+                            </th>
+                            <th>
+                                <span class="bts-col-number">B2.2</span>
+                                Services utilisateurs
+                            </th>
+                            <th>
+                                <span class="bts-col-number">B2.3</span>
+                                Développement pro
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <!-- Row 1 -->
+                        <tr>
+                            <td class="bts-row-label">
+                                <span class="bts-row-number">01</span>
+                                Formation
+                            </td>
+                            <td><a href="#" class="bts-check bts-check--active" title="Compétence validée">✕</a></td>
+                            <td><a href="#" class="bts-check" title="Ajouter une réalisation">✕</a></td>
+                            <td><a href="#" class="bts-check" title="Ajouter une réalisation">✕</a></td>
+                            <td><a href="#" class="bts-check" title="Ajouter une réalisation">✕</a></td>
+                            <td><a href="#" class="bts-check" title="Ajouter une réalisation">✕</a></td>
+                            <td><a href="#" class="bts-check" title="Ajouter une réalisation">✕</a></td>
+                        </tr>
+                        <!-- Row 2 -->
+                        <tr>
+                            <td class="bts-row-label">
+                                <span class="bts-row-number">02</span>
+                                Stage 1ère année
+                            </td>
+                            <td><a href="#" class="bts-check" title="Ajouter une réalisation">✕</a></td>
+                            <td><a href="#" class="bts-check" title="Ajouter une réalisation">✕</a></td>
+                            <td><a href="#" class="bts-check" title="Ajouter une réalisation">✕</a></td>
+                            <td><a href="#" class="bts-check" title="Ajouter une réalisation">✕</a></td>
+                            <td><a href="#" class="bts-check" title="Ajouter une réalisation">✕</a></td>
+                            <td><a href="#" class="bts-check" title="Ajouter une réalisation">✕</a></td>
+                        </tr>
+                        <!-- Row 3 -->
+                        <tr>
+                            <td class="bts-row-label">
+                                <span class="bts-row-number">03</span>
+                                Stage 2ème année
+                            </td>
+                            <td><a href="#" class="bts-check" title="Ajouter une réalisation">✕</a></td>
+                            <td><a href="#" class="bts-check" title="Ajouter une réalisation">✕</a></td>
+                            <td><a href="#" class="bts-check" title="Ajouter une réalisation">✕</a></td>
+                            <td><a href="#" class="bts-check" title="Ajouter une réalisation">✕</a></td>
+                            <td><a href="#" class="bts-check" title="Ajouter une réalisation">✕</a></td>
+                            <td><a href="#" class="bts-check" title="Ajouter une réalisation">✕</a></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p class="text-white/30 text-xs mt-4 text-right">Cliquez sur une case ✕ pour accéder à la réalisation associée</p>
+
             </div>
         </section>
     @endauth
