@@ -10,7 +10,7 @@
                 <li><a href="#accueil" class="nav-link text-gray-700 hover:text-accent font-medium relative">Accueil</a></li>
                 <li><a href="#apropos" class="nav-link text-gray-700 hover:text-accent font-medium relative">À propos</a></li>
                 <li><a href="#parcours" class="nav-link text-gray-700 hover:text-accent font-medium relative">Parcours</a></li>
-                <li><a href="#projets" class="nav-link text-gray-700 hover:text-accent font-medium relative">Projets</a></li>
+{{--                <li><a href="#projets" class="nav-link text-gray-700 hover:text-accent font-medium relative">Projets</a></li>--}}
                 <li><a href="#contact" class="nav-link text-gray-700 hover:text-accent font-medium relative">Contact</a></li>
 
                 @auth

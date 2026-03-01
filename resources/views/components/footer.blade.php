@@ -15,7 +15,7 @@
                     <li><a href="#accueil" class="hover:text-accent transition">Accueil</a></li>
                     <li><a href="#apropos" class="hover:text-accent transition">À propos</a></li>
                     <li><a href="#parcours" class="hover:text-accent transition">Parcours</a></li>
-                    <li><a href="#projets" class="hover:text-accent transition">Projets</a></li>
+{{--                    <li><a href="#projets" class="hover:text-accent transition">Projets</a></li>--}}
                     <li><a href="#contact" class="hover:text-accent transition">Contact</a></li>
                 </ul>
             </div>

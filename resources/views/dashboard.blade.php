@@ -82,6 +82,118 @@
             box-shadow: 0 10px 20px rgba(233, 69, 96, 0.3);
         }
 
+        /* certifications */
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1rem;
+        }
+
+        .cert-card {
+            position: relative;
+            background: linear-gradient(135deg, #16213e, #1a1a2e);
+            border-radius: 16px;
+            padding: 1.5rem;
+            color: white;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid rgba(233, 69, 96, 0.15);
+        }
+
+        .cert-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #e94560, #ff6b8a);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .cert-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 40px rgba(233, 69, 96, 0.2);
+        }
+
+        .cert-card:hover::before {
+            opacity: 1;
+        }
+
+        .cert-card-bg-glow {
+            position: absolute;
+            top: -40px;
+            right: -40px;
+            width: 120px;
+            height: 120px;
+            background: radial-gradient(circle, rgba(233, 69, 96, 0.12), transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .cert-issuer {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #e94560;
+            font-weight: 600;
+            margin-bottom: 0.35rem;
+        }
+
+        .cert-name {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #f1f1f1;
+            line-height: 1.3;
+            margin-bottom: 0.5rem;
+        }
+
+        .cert-comment {
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.5);
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+
+        .cert-date {
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.35);
+            margin-bottom: 1rem;
+        }
+
+        .cert-pdf-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            background: rgba(233, 69, 96, 0.15);
+            color: #e94560;
+            border: 1px solid rgba(233, 69, 96, 0.3);
+            padding: 0.4rem 0.9rem;
+            border-radius: 8px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: background 0.2s ease, border-color 0.2s ease;
+        }
+
+        .cert-pdf-btn:hover {
+            background: rgba(233, 69, 96, 0.28);
+            border-color: #e94560;
+            color: #ff6b8a;
+        }
+
+        .cert-icon {
+            width: 36px;
+            height: 36px;
+            background: rgba(233, 69, 96, 0.15);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -250,9 +362,46 @@
                 </div>
             </div>
 
+            <!-- Certifications -->
             <div class="mb-16">
                 <h3 class="text-2xl font-bold text-gray-800 mb-6">Certifications</h3>
-                <p class="text-gray-800">faire une table</p>
+                <div class="cert-grid">
+                    @forelse($certifications as $cert)
+                        <div class="cert-card">
+                            <div class="cert-card-bg-glow"></div>
+
+                            <div class="cert-icon">
+                                <svg width="18" height="18" fill="none" stroke="#e94560" stroke-width="2" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                          d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
+                                </svg>
+                            </div>
+
+                            <p class="cert-issuer">{{ $cert->delivre_par }}</p>
+                            <p class="cert-name">{{ $cert->nom }}</p>
+
+                            @if($cert->commentaire)
+                                <p class="cert-comment">{{ $cert->commentaire }}</p>
+                            @endif
+
+                            @if($cert->date_obtention)
+                                <p class="cert-date">{{ $cert->date_obtention->format('Y') }}</p>
+                            @endif
+
+                            @if($cert->pdf_url)
+                                <a href="{{ asset($cert->pdf_url) }}" target="_blank" class="cert-pdf-btn">
+                                    <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                              d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                                    </svg>
+                                    Voir le certificat
+                                </a>
+                            @endif
+                        </div>
+                    @empty
+                        <p class="text-gray-400 col-span-full">Aucune certification pour le moment.</p>
+                    @endforelse
+                </div>
             </div>
 
             <!-- Compétences -->
@@ -392,47 +541,47 @@
         </div>
     </section>
 
-    <!-- Section Projets -->
-    <section id="projets" class="py-24 px-6 bg-white">
-        <div class="container mx-auto max-w-6xl">
-            <h2 class="section-title mb-16 bg-gradient-to-r from-accent to-pink-500 bg-clip-text text-transparent">Mes Projets</h2>
+{{--    <!-- Section Projets -->--}}
+{{--    <section id="projets" class="py-24 px-6 bg-white">--}}
+{{--        <div class="container mx-auto max-w-6xl">--}}
+{{--            <h2 class="section-title mb-16 bg-gradient-to-r from-accent to-pink-500 bg-clip-text text-transparent">Mes Projets</h2>--}}
 
-            <div class="grid md:grid-cols-2 gap-8">
-                @include('components.project-card', [
-                    'title' => 'Nom du Projet 1',
-                    'description' => 'Description courte du projet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Application web développée avec Laravel pour gérer...',
-                    'tags' => ['Laravel', 'MySQL', 'Tailwind'],
-                    'gradient' => 'from-blue-500 to-purple-600',
-                    'github' => '#',
-                    'demo' => '#'
-                ])
+{{--            <div class="grid md:grid-cols-2 gap-8">--}}
+{{--                @include('components.project-card', [--}}
+{{--                    'title' => 'Nom du Projet 1',--}}
+{{--                    'description' => 'Description courte du projet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Application web développée avec Laravel pour gérer...',--}}
+{{--                    'tags' => ['Laravel', 'MySQL', 'Tailwind'],--}}
+{{--                    'gradient' => 'from-blue-500 to-purple-600',--}}
+{{--                    'github' => '#',--}}
+{{--                    'demo' => '#'--}}
+{{--                ])--}}
 
-                @include('components.project-card', [
-                    'title' => 'Nom du Projet 2',
-                    'description' => 'Description courte du projet. Outil en ligne de commande développé en Python pour automatiser...',
-                    'tags' => ['Python', 'Linux', 'Bash'],
-                    'gradient' => 'from-green-500 to-teal-600',
-                    'github' => '#'
-                ])
+{{--                @include('components.project-card', [--}}
+{{--                    'title' => 'Nom du Projet 2',--}}
+{{--                    'description' => 'Description courte du projet. Outil en ligne de commande développé en Python pour automatiser...',--}}
+{{--                    'tags' => ['Python', 'Linux', 'Bash'],--}}
+{{--                    'gradient' => 'from-green-500 to-teal-600',--}}
+{{--                    'github' => '#'--}}
+{{--                ])--}}
 
-                @include('components.project-card', [
-                    'title' => 'Nom du Projet 3',
-                    'description' => 'Infrastructure réseau complète pour une PME avec serveur Active Directory, DHCP, DNS...',
-                    'tags' => ['Windows Server', 'Active Directory', 'Réseaux'],
-                    'gradient' => 'from-red-500 to-pink-600',
-                    'doc' => '#'
-                ])
+{{--                @include('components.project-card', [--}}
+{{--                    'title' => 'Nom du Projet 3',--}}
+{{--                    'description' => 'Infrastructure réseau complète pour une PME avec serveur Active Directory, DHCP, DNS...',--}}
+{{--                    'tags' => ['Windows Server', 'Active Directory', 'Réseaux'],--}}
+{{--                    'gradient' => 'from-red-500 to-pink-600',--}}
+{{--                    'doc' => '#'--}}
+{{--                ])--}}
 
-                @include('components.project-card', [
-                    'title' => 'Nom du Projet 4',
-                    'description' => 'Application mobile développée en React Native pour la gestion de...',
-                    'tags' => ['React Native', 'JavaScript', 'API REST'],
-                    'gradient' => 'from-orange-500 to-yellow-600',
-                    'github' => '#'
-                ])
-            </div>
-        </div>
-    </section>
+{{--                @include('components.project-card', [--}}
+{{--                    'title' => 'Nom du Projet 4',--}}
+{{--                    'description' => 'Application mobile développée en React Native pour la gestion de...',--}}
+{{--                    'tags' => ['React Native', 'JavaScript', 'API REST'],--}}
+{{--                    'gradient' => 'from-orange-500 to-yellow-600',--}}
+{{--                    'github' => '#'--}}
+{{--                ])--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </section>--}}
 
     <!-- Section Contact -->
     <section id="contact" class="py-24 px-6 bg-gray-50">
