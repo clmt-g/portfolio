@@ -18,7 +18,7 @@ class ContactController extends Controller
         ]);
 
         // 2. Envoi du mail
-        Mail::to('guerault.clement@gmail.com')->send(new ContactMessage($validated));
+        Mail::to('c18755789@gmail.com')->send(new ContactMessage($validated));
 
         // 3. Retour vers la page avec un message de succès
         return redirect()->to(url()->previous() . '#contact')->with('success', 'Votre message a bien été envoyé !');
