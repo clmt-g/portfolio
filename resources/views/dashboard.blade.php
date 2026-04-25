@@ -897,10 +897,10 @@
                                 Formation
                             </td>
                             <td><a href="{{ asset('assets/preuves/PREUVE_7.pdf') }}" target="_blank" class="bts-check bts-check--active" title="Compétence validée">✕</a></td>
-                            <td><a href="#" class="bts-check" title="Ajouter une réalisation">✕</a></td>
+                            <td><a class="bts-check" title="Ajouter une réalisation">✕</a></td>
                             <td><a href="{{ asset('assets/preuves/PREUVE_3.pdf') }}" target="_blank" class="bts-check bts-check--active" title="Compétence validée">✕</a></td>
-                            <td><a href="#" class="bts-check" title="Ajouter une réalisation">✕</a></td>
-                            <td><a href="#" class="bts-check" title="Ajouter une réalisation">✕</a></td>
+                            <td><a class="bts-check" title="Ajouter une réalisation">✕</a></td>
+                            <td><a class="bts-check" title="Ajouter une réalisation">✕</a></td>
                             <td><a href="{{ asset('assets/preuves/PREUVE_6.pdf') }}" target="_blank" class="bts-check bts-check--active" title="Compétence validée">✕</a></td>
                         </tr>
                         <!-- Row 2 -->
@@ -911,10 +911,10 @@
                             </td>
                             <td><a href="{{ asset('assets/preuves/PREUVE_1.pdf') }}" target="_blank" class="bts-check bts-check--active" title="Compétence validée">✕</a></td>
                             <td><a href="{{ asset('assets/preuves/PREUVE_2.pdf') }}" target="_blank" class="bts-check bts-check--active" title="Compétence validée">✕</a></td>
-                            <td><a href="#" class="bts-check" title="Ajouter une réalisation">✕</a></td>
-                            <td><a href="#" class="bts-check" title="Ajouter une réalisation">✕</a></td>
+                            <td><a class="bts-check" title="Ajouter une réalisation">✕</a></td>
+                            <td><a class="bts-check" title="Ajouter une réalisation">✕</a></td>
                             <td><a href="{{ asset('assets/preuves/PREUVE_8.pdf') }}" target="_blank" class="bts-check bts-check--active" title="Compétence validée">✕</a></td>
-                            <td><a href="#" class="bts-check" title="Ajouter une réalisation">✕</a></td>
+                            <td><a class="bts-check" title="Ajouter une réalisation">✕</a></td>
                         </tr>
                         <!-- Row 3 -->
                         <tr>
@@ -922,12 +922,12 @@
                                 <span class="bts-row-number">03</span>
                                 Stage 2ème année
                             </td>
-                            <td><a href="#" class="bts-check" title="Ajouter une réalisation">✕</a></td>
-                            <td><a href="#" class="bts-check" title="Ajouter une réalisation">✕</a></td>
-                            <td><a href="#" class="bts-check" title="Ajouter une réalisation">✕</a></td>
+                            <td><a  class="bts-check" title="Ajouter une réalisation">✕</a></td>
+                            <td><a class="bts-check" title="Ajouter une réalisation">✕</a></td>
+                            <td><a class="bts-check" title="Ajouter une réalisation">✕</a></td>
                             <td><a href="{{ asset('assets/preuves/PREUVE_4.pdf') }}" target="_blank" class="bts-check bts-check--active" title="Compétence validée">✕</a></td>
                             <td><a href="{{ asset('assets/preuves/PREUVE_5.pdf') }}" target="_blank" class="bts-check bts-check--active" title="Compétence validée">✕</a></td>
-                            <td><a href="#" class="bts-check" title="Ajouter une réalisation">✕</a></td>
+                            <td><a class="bts-check" title="Ajouter une réalisation">✕</a></td>
                         </tr>
                         </tbody>
                     </table>
