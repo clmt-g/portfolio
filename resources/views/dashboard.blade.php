@@ -456,7 +456,7 @@
                         <h4 class="text-xl font-bold text-gray-800 mb-2">Curriculum Vitae</h4>
                         <p class="text-gray-600">Téléchargez mon CV complet au format PDF</p>
                     </div>
-                    <a href="{{ asset('images/CV_CLEMENT_GUERAULT.pdf') }}" class="btn-primary px-6 py-3 text-white rounded-lg font-semibold inline-flex items-center gap-2">
+                    <a href="{{ asset('images/CV_CLEMENT_GUERAULT.pdf') }}" target="_blank" class="btn-primary px-6 py-3 text-white rounded-lg font-semibold inline-flex items-center gap-2">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
                         </svg>
@@ -494,15 +494,15 @@
                         <div class="space-y-2">
                             <div class="flex justify-between">
                                 <span>Rang</span>
-                                <span class="font-bold">~#18500</span>
+                                <span class="font-bold">~#17000</span>
                             </div>
                             <div class="flex justify-between">
                                 <span>Points</span>
-                                <span class="font-bold">875 pts</span>
+                                <span class="font-bold">945 pts</span>
                             </div>
                             <div class="flex justify-between">
                                 <span>Challenges</span>
-                                <span class="font-bold">62 validés</span>
+                                <span class="font-bold">68 validés</span>
                             </div>
                         </div>
                     </div>
@@ -838,7 +838,7 @@
                             <h2 class="section-title text-white mb-3">Épreuve E4 — BTS SIO</h2>
                             <p class="text-white/50 text-sm">Solutions Logicielles et Applications Métiers</p>
                         </div>
-                        <a href="{{ asset('assets/bts/grille-competences.pdf') }}" target="_blank" class="bts-pdf-btn">
+                        <a href="{{ asset('assets/TABLEAU_SYNTHESE.pdf') }}" target="_blank" class="bts-pdf-btn">
                             <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
                             </svg>
@@ -886,12 +886,12 @@
                                 <span class="bts-row-number">01</span>
                                 Formation
                             </td>
-                            <td><a href="#" class="bts-check bts-check--active" title="Compétence validée">✕</a></td>
+                            <td><a href="{{ asset('assets/preuves/PREUVE_7.pdf') }}" target="_blank" class="bts-check bts-check--active" title="Compétence validée">✕</a></td>
+                            <td><a href="#" class="bts-check" title="Ajouter une réalisation">✕</a></td>
+                            <td><a href="{{ asset('assets/preuves/PREUVE_3.pdf') }}" target="_blank" class="bts-check bts-check--active" title="Compétence validée">✕</a></td>
                             <td><a href="#" class="bts-check" title="Ajouter une réalisation">✕</a></td>
                             <td><a href="#" class="bts-check" title="Ajouter une réalisation">✕</a></td>
-                            <td><a href="#" class="bts-check" title="Ajouter une réalisation">✕</a></td>
-                            <td><a href="#" class="bts-check" title="Ajouter une réalisation">✕</a></td>
-                            <td><a href="#" class="bts-check" title="Ajouter une réalisation">✕</a></td>
+                            <td><a href="{{ asset('assets/preuves/PREUVE_6.pdf') }}" target="_blank" class="bts-check bts-check--active" title="Compétence validée">✕</a></td>
                         </tr>
                         <!-- Row 2 -->
                         <tr>
@@ -899,11 +899,11 @@
                                 <span class="bts-row-number">02</span>
                                 Stage 1ère année
                             </td>
+                            <td><a href="{{ asset('assets/preuves/PREUVE_1.pdf') }}" target="_blank" class="bts-check bts-check--active" title="Compétence validée">✕</a></td>
+                            <td><a href="{{ asset('assets/preuves/PREUVE_2.pdf') }}" target="_blank" class="bts-check bts-check--active" title="Compétence validée">✕</a></td>
                             <td><a href="#" class="bts-check" title="Ajouter une réalisation">✕</a></td>
                             <td><a href="#" class="bts-check" title="Ajouter une réalisation">✕</a></td>
-                            <td><a href="#" class="bts-check" title="Ajouter une réalisation">✕</a></td>
-                            <td><a href="#" class="bts-check" title="Ajouter une réalisation">✕</a></td>
-                            <td><a href="#" class="bts-check" title="Ajouter une réalisation">✕</a></td>
+                            <td><a href="{{ asset('assets/preuves/PREUVE_8.pdf') }}" target="_blank" class="bts-check bts-check--active" title="Compétence validée">✕</a></td>
                             <td><a href="#" class="bts-check" title="Ajouter une réalisation">✕</a></td>
                         </tr>
                         <!-- Row 3 -->
@@ -915,8 +915,8 @@
                             <td><a href="#" class="bts-check" title="Ajouter une réalisation">✕</a></td>
                             <td><a href="#" class="bts-check" title="Ajouter une réalisation">✕</a></td>
                             <td><a href="#" class="bts-check" title="Ajouter une réalisation">✕</a></td>
-                            <td><a href="#" class="bts-check" title="Ajouter une réalisation">✕</a></td>
-                            <td><a href="#" class="bts-check" title="Ajouter une réalisation">✕</a></td>
+                            <td><a href="{{ asset('assets/preuves/PREUVE_4.pdf') }}" target="_blank" class="bts-check bts-check--active" title="Compétence validée">✕</a></td>
+                            <td><a href="{{ asset('assets/preuves/PREUVE_5.pdf') }}" target="_blank" class="bts-check bts-check--active" title="Compétence validée">✕</a></td>
                             <td><a href="#" class="bts-check" title="Ajouter une réalisation">✕</a></td>
                         </tr>
                         </tbody>
