@@ -454,13 +454,13 @@
                 <div class="flex items-center justify-between flex-wrap gap-4">
                     <div>
                         <h4 class="text-xl font-bold text-gray-800 mb-2">Curriculum Vitae</h4>
-                        <p class="text-gray-600">Téléchargez mon CV complet au format PDF</p>
+                        <p class="text-gray-600">Consulter mon CV complet au format PDF</p>
                     </div>
                     <a href="{{ asset('images/CV_CLEMENT_GUERAULT.pdf') }}" target="_blank" class="btn-primary px-6 py-3 text-white rounded-lg font-semibold inline-flex items-center gap-2">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
                         </svg>
-                        Télécharger CV
+                        Consulter CV
                     </a>
                 </div>
             </div>
@@ -685,7 +685,7 @@
                     <!-- BTS -->
                     <div class="relative pl-20">
                         <div class="timeline-dot absolute left-6 top-2 rounded-full"></div>
-                        <div class="card bg-white p-6 rounded-xl shadow-md">
+                        <div class="card bg-white p-6 rounded-xl shadow-md border-l-4 border-accent">
                             <div class="flex items-center justify-between mb-3 flex-wrap gap-2">
                                 <h3 class="text-xl font-bold text-gray-800">BTS SIO - Option SLAM</h3>
                                 <span class="text-sm text-accent font-semibold bg-red-50 px-3 py-1 rounded-full">2024 - 2026</span>
@@ -700,7 +700,7 @@
                     <!-- BAC -->
                     <div class="relative pl-20">
                         <div class="timeline-dot absolute left-6 top-2 rounded-full"></div>
-                        <div class="card bg-white p-6 rounded-xl shadow-md">
+                        <div class="card bg-white p-6 rounded-xl shadow-md border-l-4 border-accent">
                             <div class="flex items-center justify-between mb-3 flex-wrap gap-2">
                                 <h3 class="text-xl font-bold text-gray-800">Baccalauréat Général</h3>
                                 <span class="text-sm text-accent font-semibold bg-red-50 px-3 py-1 rounded-full">2023</span>
