@@ -17,6 +17,9 @@
                     <li><a href="#parcours" class="hover:text-accent transition">Parcours</a></li>
 {{--                    <li><a href="#projets" class="hover:text-accent transition">Projets</a></li>--}}
                     <li><a href="#contact" class="hover:text-accent transition">Contact</a></li>
+                    @auth
+                        <li><a href="#epreuve-bts" class="hover:text-accent transition">Épreuve BTS</a></li>
+                    @endauth
                 </ul>
             </div>
             <div>

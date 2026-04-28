@@ -226,19 +226,6 @@
             pointer-events: none;
         }
 
-        .bts-badge {
-            display: inline-block;
-            background: rgba(233, 69, 96, 0.15);
-            color: #e94560;
-            border: 1px solid rgba(233, 69, 96, 0.4);
-            padding: 0.25rem 0.85rem;
-            border-radius: 999px;
-            font-size: 0.72rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.12em;
-        }
-
         .bts-pdf-btn {
             display: inline-flex;
             align-items: center;
@@ -268,6 +255,7 @@
             overflow-x: auto;
             border-radius: 16px;
             border: 1px solid rgba(255, 255, 255, 0.08);
+            width: 100%;
         }
 
         .bts-table {
@@ -359,29 +347,45 @@
             font-size: 0.9rem;
             font-weight: 700;
             text-decoration: none;
-            background: rgba(255, 255, 255, 0.04);
-            color: rgba(255, 255, 255, 0.15);
-            border: 1px solid rgba(255, 255, 255, 0.07);
             transition: background 0.2s, color 0.2s, border-color 0.2s, transform 0.15s;
         }
 
-        .bts-check:hover {
-            background: rgba(233, 69, 96, 0.15);
-            color: #e94560;
-            border-color: rgba(233, 69, 96, 0.4);
-            transform: scale(1.15);
+        /* Case non renseignée */
+        .bts-check--empty {
+            background: rgba(255, 255, 255, 0.04);
+            color: rgba(255, 255, 255, 0.2);
+            border: 1px dashed rgba(255, 255, 255, 0.18);
+        }
+        .bts-check--empty:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: scale(1.1);
         }
 
         /* Case active (compétence validée avec lien) */
         .bts-check--active {
             background: rgba(233, 69, 96, 0.18);
             color: #e94560;
-            border-color: rgba(233, 69, 96, 0.45);
+            border: 1px solid rgba(233, 69, 96, 0.45);
         }
-
         .bts-check--active:hover {
             background: rgba(233, 69, 96, 0.32);
             transform: scale(1.15);
+        }
+
+        /* BTS table legend */
+        .bts-legend {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 1rem;
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.5);
+            justify-content: flex-end;
+        }
+
+        .bts-legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
     </style>
 @endpush
@@ -844,9 +848,9 @@
                 <div class="bts-header mb-12">
                     <div class="flex items-start justify-between flex-wrap gap-6">
                         <div>
-                            <div class="bts-badge mb-3">Option SLAM</div>
-                            <h2 class="section-title text-white mb-3">Épreuve E4 — BTS SIO</h2>
-                            <p class="text-white/50 text-sm">Solutions Logicielles et Applications Métiers</p>
+                            <h2 class="section-title text-white mb-3">
+                                Épreuve E5 — BTS SIO
+                            </h2>
                         </div>
                         <a href="{{ asset('assets/TABLEAU_SYNTHESE.pdf') }}" target="_blank" class="bts-pdf-btn">
                             <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -897,10 +901,10 @@
                                 Formation
                             </td>
                             <td><a href="{{ asset('assets/preuves/PREUVE_7.pdf') }}" target="_blank" class="bts-check bts-check--active" title="Compétence validée">✕</a></td>
-                            <td><a class="bts-check" title="Ajouter une réalisation">✕</a></td>
+                            <td><span class="bts-check bts-check--empty" title="Non renseignée">–</span></td>
                             <td><a href="{{ asset('assets/preuves/PREUVE_3.pdf') }}" target="_blank" class="bts-check bts-check--active" title="Compétence validée">✕</a></td>
-                            <td><a class="bts-check" title="Ajouter une réalisation">✕</a></td>
-                            <td><a class="bts-check" title="Ajouter une réalisation">✕</a></td>
+                            <td><span class="bts-check bts-check--empty" title="Non renseignée">–</span></td>
+                            <td><span class="bts-check bts-check--empty" title="Non renseignée">–</span></td>
                             <td><a href="{{ asset('assets/preuves/PREUVE_6.pdf') }}" target="_blank" class="bts-check bts-check--active" title="Compétence validée">✕</a></td>
                         </tr>
                         <!-- Row 2 -->
@@ -911,10 +915,10 @@
                             </td>
                             <td><a href="{{ asset('assets/preuves/PREUVE_1.pdf') }}" target="_blank" class="bts-check bts-check--active" title="Compétence validée">✕</a></td>
                             <td><a href="{{ asset('assets/preuves/PREUVE_2.pdf') }}" target="_blank" class="bts-check bts-check--active" title="Compétence validée">✕</a></td>
-                            <td><a class="bts-check" title="Ajouter une réalisation">✕</a></td>
-                            <td><a class="bts-check" title="Ajouter une réalisation">✕</a></td>
+                            <td><span class="bts-check bts-check--empty" title="Non renseignée">–</span></td>
+                            <td><span class="bts-check bts-check--empty" title="Non renseignée">–</span></td>
                             <td><a href="{{ asset('assets/preuves/PREUVE_8.pdf') }}" target="_blank" class="bts-check bts-check--active" title="Compétence validée">✕</a></td>
-                            <td><a class="bts-check" title="Ajouter une réalisation">✕</a></td>
+                            <td><span class="bts-check bts-check--empty" title="Non renseignée">–</span></td>
                         </tr>
                         <!-- Row 3 -->
                         <tr>
@@ -922,18 +926,27 @@
                                 <span class="bts-row-number">03</span>
                                 Stage 2ème année
                             </td>
-                            <td><a  class="bts-check" title="Ajouter une réalisation">✕</a></td>
-                            <td><a class="bts-check" title="Ajouter une réalisation">✕</a></td>
-                            <td><a class="bts-check" title="Ajouter une réalisation">✕</a></td>
+                            <td><span class="bts-check bts-check--empty" title="Non renseignée">–</span></td>
+                            <td><span class="bts-check bts-check--empty" title="Non renseignée">–</span></td>
+                            <td><span class="bts-check bts-check--empty" title="Non renseignée">–</span></td>
                             <td><a href="{{ asset('assets/preuves/PREUVE_4.pdf') }}" target="_blank" class="bts-check bts-check--active" title="Compétence validée">✕</a></td>
                             <td><a href="{{ asset('assets/preuves/PREUVE_5.pdf') }}" target="_blank" class="bts-check bts-check--active" title="Compétence validée">✕</a></td>
-                            <td><a class="bts-check" title="Ajouter une réalisation">✕</a></td>
+                            <td><span class="bts-check bts-check--empty" title="Non renseignée">–</span></td>
                         </tr>
                         </tbody>
                     </table>
                 </div>
 
-                <p class="text-white/30 text-xs mt-4 text-right">Cliquez sur une case ✕ pour accéder à la réalisation associée</p>
+                <div class="bts-legend">
+                    <div class="bts-legend-item">
+                        <span class="bts-check bts-check--active">✕</span>
+                        Compétence validée
+                    </div>
+                    <div class="bts-legend-item">
+                        <span class="bts-check bts-check--empty">–</span>
+                        Non renseignée
+                    </div>
+                </div>
 
             </div>
         </section>
