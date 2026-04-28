@@ -30,7 +30,7 @@
                         <a href="{{ route('login') }}" class="px-4 py-2 bg-accent text-white rounded-lg hover:bg-red-600 transition">
                             Connexion
                         </a>
-                    </li>S
+                    </li>
                 @endauth
             </ul>
 
