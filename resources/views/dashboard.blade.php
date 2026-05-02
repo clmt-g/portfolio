@@ -642,6 +642,7 @@
     </section>
 
     <!-- Section Parcours -->
+    <!-- Section Parcours -->
     <section id="parcours" class="py-24 px-6 bg-gray-50">
         <div class="container mx-auto max-w-4xl">
             <h2 class="section-title mb-16 bg-gradient-to-r from-accent to-pink-500 bg-clip-text text-transparent">Mon Parcours</h2>
@@ -653,42 +654,42 @@
                 <!-- Timeline items -->
                 <div class="space-y-12">
 
-                    <!-- stage 2 -->
+                    <!-- Stage 2 (Style Expérience) -->
                     <div class="relative pl-20">
-                        <div class="timeline-dot absolute left-6 top-2 rounded-full"></div>
-                        <div class="card bg-white p-6 rounded-xl shadow-md border-l-4 border-accent">
+                        <div class="timeline-dot absolute left-6 top-2 rounded-full bg-blue-500 ring-4 ring-blue-100"></div>
+                        <div class="card bg-blue-50/30 p-6 rounded-xl shadow-sm border-l-4 border-blue-500 hover:shadow-md transition-shadow">
                             <div class="flex items-center justify-between mb-3 flex-wrap gap-2">
                                 <h3 class="text-xl font-bold text-gray-800">Stage - CNRS</h3>
-                                <span class="text-sm text-accent font-semibold bg-red-50 px-3 py-1 rounded-full">février - avril 2026 (8 semaines)</span>
+                                <span class="text-sm text-blue-600 font-semibold bg-blue-100 px-3 py-1 rounded-full">février - avril 2026 (8 semaines)</span>
                             </div>
                             <p class="text-gray-600 font-medium mb-2">Poste : Développeur</p>
                             <ul class="text-gray-500 space-y-1 list-disc list-inside">
-                                <li>Développment d'un logiciel</li>
-                                <li>Évaluation basique de la surface d’attaque interne.</li>
-                                <li>Technologies utilisées : Python, svelte, javascript, linux</li>
+                                <li>Développement d'un logiciel métier</li>
+                                <li>Évaluation basique de la surface d’attaque interne</li>
+                                <li><span class="text-xs font-mono bg-white px-2 py-0.5 rounded border">Python</span> <span class="text-xs font-mono bg-white px-2 py-0.5 rounded border">Svelte</span> <span class="text-xs font-mono bg-white px-2 py-0.5 rounded border">Linux</span></li>
                             </ul>
                         </div>
                     </div>
 
-                    <!-- Stage 1 -->
+                    <!-- Stage 1 (Style Expérience) -->
                     <div class="relative pl-20">
-                        <div class="timeline-dot absolute left-6 top-2 rounded-full"></div>
-                        <div class="card bg-white p-6 rounded-xl shadow-md border-l-4 border-accent">
+                        <div class="timeline-dot absolute left-6 top-2 rounded-full bg-blue-500 ring-4 ring-blue-100"></div>
+                        <div class="card bg-blue-50/30 p-6 rounded-xl shadow-sm border-l-4 border-blue-500 hover:shadow-md transition-shadow">
                             <div class="flex items-center justify-between mb-3 flex-wrap gap-2">
                                 <h3 class="text-xl font-bold text-gray-800">Stage - Petzl</h3>
-                                <span class="text-sm text-accent font-semibold bg-red-50 px-3 py-1 rounded-full">juin - juillet 2025 (8 semaines)</span>
+                                <span class="text-sm text-blue-600 font-semibold bg-blue-100 px-3 py-1 rounded-full">juin - juillet 2025 (8 semaines)</span>
                             </div>
                             <p class="text-gray-600 font-medium mb-2">Poste : Technicien Informatique</p>
                             <ul class="text-gray-500 space-y-1 list-disc list-inside">
-                                <li>Ségmentation du réseau de l'entreprise en VLANs</li>
-                                <li>Support aux utilisateurs</li>
+                                <li>Segmentation du réseau de l'entreprise en VLANs</li>
+                                <li>Support aux utilisateurs et maintenance parc</li>
                             </ul>
                         </div>
                     </div>
 
-                    <!-- BTS -->
+                    <!-- BTS (Style Académique) -->
                     <div class="relative pl-20">
-                        <div class="timeline-dot absolute left-6 top-2 rounded-full"></div>
+                        <div class="timeline-dot absolute left-6 top-2 rounded-full bg-accent ring-4 ring-red-100"></div>
                         <div class="card bg-white p-6 rounded-xl shadow-md border-l-4 border-accent">
                             <div class="flex items-center justify-between mb-3 flex-wrap gap-2">
                                 <h3 class="text-xl font-bold text-gray-800">BTS SIO - Option SLAM</h3>
@@ -696,14 +697,29 @@
                             </div>
                             <p class="text-gray-600 font-medium mb-2">Institution des Chartreux</p>
                             <p class="text-gray-500">
-                                Formation en Services Informatiques aux Organisations avec spécialisation Solutions Logicielles et Applications Métiers.
+                                Formation spécialisée en Solutions Logicielles et Applications Métiers. Apprentissage du développement web, mobile et gestion de bases de données.
                             </p>
                         </div>
                     </div>
 
-                    <!-- BAC -->
+                    <!-- DEUST (Style Académique - Réorientation) -->
                     <div class="relative pl-20">
-                        <div class="timeline-dot absolute left-6 top-2 rounded-full"></div>
+                        <div class="timeline-dot absolute left-6 top-2 rounded-full bg-gray-400 ring-4 ring-gray-100"></div>
+                        <div class="card bg-white p-6 rounded-xl shadow-md border-l-4 border-gray-400 opacity-80">
+                            <div class="flex items-center justify-between mb-3 flex-wrap gap-2">
+                                <h3 class="text-xl font-bold text-gray-700">DEUST Métiers de la Forme</h3>
+                                <span class="text-sm text-gray-500 font-semibold bg-gray-100 px-3 py-1 rounded-full">Sept. - Nov. 2023</span>
+                            </div>
+                            <p class="text-gray-600 font-medium mb-1">Université Claude Bernard Lyon 1</p>
+                            <p class="text-sm text-gray-500 italic text-pretty">
+                                Début de cursus universitaire (3 mois). Choix d'une réorientation vers l'informatique.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- BAC (Style Académique) -->
+                    <div class="relative pl-20">
+                        <div class="timeline-dot absolute left-6 top-2 rounded-full bg-accent ring-4 ring-red-100"></div>
                         <div class="card bg-white p-6 rounded-xl shadow-md border-l-4 border-accent">
                             <div class="flex items-center justify-between mb-3 flex-wrap gap-2">
                                 <h3 class="text-xl font-bold text-gray-800">Baccalauréat Général</h3>
@@ -711,10 +727,11 @@
                             </div>
                             <p class="text-gray-600 font-medium mb-2">Lycée polyvalent Gaspard Monge</p>
                             <p class="text-gray-500">
-                                Obtention du baccalauréat avec mention bien. Spécialités : Mathématiques, AMC, SI
+                                Obtention avec mention Bien. Spécialités : Mathématiques, AMC (Anglais Monde Contemporain) et Sciences de l'Ingénieur.
                             </p>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
